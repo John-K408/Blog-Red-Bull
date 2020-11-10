@@ -19,7 +19,7 @@ ben_roesthlisberger_logs <- ben_roethlisberger %>%
   mutate(total_tds = pTD + rTD) %>%
   mutate(fpts = 4*pTD + 6*rTD + 0.025*pyds + 0.1*ryds - 2*Int - 2*Fmb) %>%
   select(Date, Week, Rate, total_yards, total_tds, fpts) %>%
-  mutate(Week = as.numeric(1:nrow(ben_roesthlisberger_logs)))
+  mutate(Week = as.numeric(1:nrow(ben_roesthlisberger)))
 
 #Dates from Game Logs (used in merge with twitter data)
 ben_roesthlisberger_dates <- ben_roesthlisberger_logs %>%
